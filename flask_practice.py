@@ -102,7 +102,7 @@ def index(name, age):
     <p> Hello {}!</p>
     <p>You are {} year(s) old</p>
     <hr>
-    <a href="{}>Welcome</a>
+    <a href="{}">Welcome</a>
 </body>
 </html>
 """.format(name, age, url)
@@ -122,7 +122,7 @@ def about(name, favourite_colour):
     <p> We are so glad you popped by today - this page was built by Jody and Alice
     <p> Your favourite colour is {}.</p>
     <hr>
-    <a href="{}>Welcome</a>
+    <a href="{}">Welcome</a>
 </body>
 </html>
 """.format(name, favourite_colour, url)
