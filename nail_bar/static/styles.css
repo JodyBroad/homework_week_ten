@@ -4,20 +4,20 @@ body {
       font: 20px Quicksand, sans-serif;
       line-height: 1.8;
       color: #f5f6f7;
+      background-color: #318f76;
   }
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
   .bg-1 {
       background-color: #9B287B; /* Amaranth Deep Purple */
-      color: #ffffff;
-  }
+      color: #f5f6f7;
   .bg-2 {
-      background-color: #122932; /* Dark Gunmetal */
-      color: #ffffff;
+      background-color: #318f76; /* Tealy */
+      color: #000000;
   }
   .bg-3 {
-      background-color: #F5E6E8; /* Isabelline */
-      color: #555555;
+      background-color: #d1d93f; /* mustardy */
+      color: #000000;
   }
   .bg-4 {
       background-color: #383B53; /* Charcoal */
