@@ -18,6 +18,12 @@ services = [
         'time_required': '1 hour'
     },
     {
+        'service': 'Soak and remove existing gel polish',
+        'price': '£5',
+        'nail_artist': 'Jody Broad',
+        'time_required': '15 minutes'
+    },
+    {
         'service': 'Acrylic nails - full set',
         'price': '£85',
         'nail_artist': 'Alice Caffyn',
@@ -29,6 +35,7 @@ services = [
         'nail_artist': 'Alice Caffyn',
         'time_required': '25 minutes'
     }
+
 
 ]
 

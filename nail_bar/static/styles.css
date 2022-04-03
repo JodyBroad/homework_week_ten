@@ -4,24 +4,24 @@ body {
       font: 20px Quicksand, sans-serif;
       line-height: 1.8;
       color: #f5f6f7;
-      background-color: #318f76;
+      background-color: #006466; /* Skobeloff */
 }
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
   .bg-1 {
-      background-color: #9B287B; /* Amaranth Deep Purple */
+      background-color: #4D194D; /* Palatinate Purple */
       color: #f5f6f7;
   }
   .bg-2 {
-      background-color: #318f76; /* Tealy */
+      background-color: #0B525B; /* Midnight Green Eagle Green */
       color: #f5f6f7;
   }
   .bg-3 {
-      background-color: #d1d93f; /* mustardy */
+      background-color: #212F45; /* Prussian Blue */
       color: #f5f6f7;
   }
   .bg-4 {
-      background-color: #383B53; /* Charcoal */
+      background-color: #312244; /* Dark Purple */
       color: #fff;
   }
   .container-fluid {
