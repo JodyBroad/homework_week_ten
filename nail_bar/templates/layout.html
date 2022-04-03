@@ -61,11 +61,17 @@
       </nav>
     </header>
 
-
-  <!-- First Container -->
-    <div class="container-fluid bg-1 text-center">
+{% if title %}
+        <div class="container-fluid bg-1 text-center">
+        <img src="/static/images/two_hands.jpg" class="img-responsive img-rounded" style="display:inline" alt="Colourful nails" height="450">
+        </div>
+    {% else %}
+        <div class="container-fluid bg-1 text-center">
         <img src="/static/images/colourful_nails.jpg" class="img-responsive img-rounded" style="display:inline" alt="Colourful nails" height="450">
-    </div>
+        </div>
+    {% endif %}
+
+
 {% block content %} {% endblock %}
 
 <footer>
