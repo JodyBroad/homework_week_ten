@@ -1,9 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
- <!-- First Container -->
-<div class="container-fluid bg-3 text-center">
-    <img src="/static/images/spider_nail_art.jpg" class="img-responsive img-rounded" style="display:inline" alt="Spider nail art" width="341" height="227">
-</div>
+
 <div class="container-fluid bg-1 text-center">
     <h1>Price List</h1>
     {% for service in services %}
@@ -11,5 +8,13 @@
         <p> Nail artist is {{ service.nail_artist }} and this will require {{ service.time_required }}</p>
         <p> Price for this is {{ service.price }}</p>
     {% endfor %}
+
+<!-- First Container -->
+<div class="container-fluid bg-3 text-center">
+    <img src="/static/images/spider_nail_art.jpg" class="img-responsive img-rounded" style="display:inline" alt="Spider nail art" height="450">
+</div>
+
 {% endblock content %}
 </div>
+
+
