@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+        <title>The Nail Bar - {{ title }}</title>
+    {% else %}
+        <title>The Nail Bar</title>
+    {% endif %}
+</head>
+<body>
+    {% block content %}{% endblock %}
+    <a href='price_list'>Price List</a>
+    <a href='about'>About Us</a>
+    <a href='home'>Home</a>
+</body>
+</html>

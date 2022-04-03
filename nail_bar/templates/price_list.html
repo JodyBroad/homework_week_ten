@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Price List</h1>
+    {% for service in services %}
+        <h1>{{ service.service }}</h1>
+        <p> Nail artist is {{ service.nail_artist }} and this will require {{ service.time_required }}</p>
+        <p> Price for this is {{ service.price }}</p>
+    {% endfor %}
+{% endblock content %}
