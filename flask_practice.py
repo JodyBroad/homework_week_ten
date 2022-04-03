@@ -63,6 +63,15 @@ def cube(number):
     line = "Your number cubed is " + str(cubed)
     return line
 
+@flask_practice_app.route('/percent/<int:number>')
+def percent(number):
+    one_percent = number / 100
+    line = "One percent of your number is " + str(one_percent)
+    return line
+
+
+
+
 # return an HTML page
 
 
