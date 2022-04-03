@@ -33,6 +33,8 @@ services = [
 ]
 
 # can use more than one decorator at a time, so if you typed either '/' or '/home' you get the same stuff returned
+
+
 @nail_bar_app.route('/')
 @nail_bar_app.route('/home')
 def home():
