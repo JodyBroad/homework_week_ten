@@ -40,3 +40,6 @@ body {
   .navbar-nav  li a:hover {
       color: #9B287B !important;
   }
+  .btn-default {
+      background-color: #006466; /* Skobeloff */
+  }
