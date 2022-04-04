@@ -64,11 +64,11 @@
 
 {% if title %}
         <div class="container-fluid bg-1 text-center">
-        <img src= "{{url_for('static',filename='images/two_hands.jpg')}}" class="img-responsive img-rounded" style="display:inline" alt="Colourful nails" height="450">
+        <img src="{{url_for('static',filename='images/two_hands.jpg')}}" class="img-responsive img-rounded" style="display:inline" alt="Colourful nails" height="450">
         </div>
     {% else %}
         <div class="container-fluid bg-1 text-center">
-        <img src="/static/images/colourful_nails.jpg" class="img-responsive img-rounded" style="display:inline" alt="Colourful nails" height="450">
+        <img src="{{url_for('static',filename='images/colourful_nails.jpg')}}" class="img-responsive img-rounded" style="display:inline" alt="Colourful nails" height="450">
         </div>
     {% endif %}
 
