@@ -57,12 +57,14 @@ def about():
 def price_list():
     return render_template('price_list.html', title='Price List', services=services)
 
+
 # uses the secret maths template
 @nail_bar_app.route('/cube/<int:number>')
 def cube(number):
     cubed = number ** 3
     line_cube = "Your number cubed is" + " " + str(cubed)
     return render_template('maths.html', line_cube=line_cube)
+
 
 # uses the secret maths template
 @nail_bar_app.route('/modulus/<int:number>')
@@ -73,6 +75,7 @@ def modulus(number):
     else:
         line_mod = "Your number is odd"
     return render_template('maths.html', line_mod=line_mod)
+
 
 # will redirect if they type in something random using url_for()
 @nail_bar_app.route('/dynamic/<word>')
