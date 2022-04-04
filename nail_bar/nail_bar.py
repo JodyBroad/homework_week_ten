@@ -3,7 +3,7 @@ from flask import Flask, Response, request, url_for, render_template
 # instantiate the Flask application object
 nail_bar_app = Flask(__name__)
 
-# in reality we would be calling this info from a database
+# in reality, we would be calling this info from a database, dictionary of services to use for price_list
 services = [
     {
         'service': 'French Manicure',
