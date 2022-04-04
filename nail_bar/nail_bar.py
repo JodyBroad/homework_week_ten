@@ -81,6 +81,11 @@ def home_redirect(word):
     return render_template('redirect.html', destination=destination)
 
 
+@nail_bar_app.route('/appointment')
+def appointment():
+    return render_template('appointment.html', title='Appointments')
+
+
 # will post an appointment request - would do this using a form when we know how!
 @nail_bar_app.route('/post/appointment', methods=['POST'])
 def post_text():
