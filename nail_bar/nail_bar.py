@@ -5,7 +5,7 @@ from homework_week_ten.nail_bar.forms import ContactForm, AppointmentForm
 
 nail_bar_app = Flask(__name__)
 
-nail_bar_app.config['SECRET_KEY'] = 'YOUR_SECRET_KEY'
+nail_bar_app.config['SECRET_KEY'] = 'e0b3b359461fab01e70f38bbee9045e9'
 
 # in reality, we would be calling this info from a database, dictionary of services to use for price_list
 services = [
