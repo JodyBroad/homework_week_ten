@@ -1,17 +1,37 @@
 {% extends "layout.html" %}
 {% block content %}
-    {% if title %}
-        <div class="container-fluid bg-3 text-center">
-            <p>You can send us an appointment request using the POST method,
-                because we don't know how to build forms yet </p>
-            <p>Or email us, whatever</p>
-            <a href="mailto:thenailbar@nailbar.com?subject=Appointment">Email appointment request</a>
-        </div>
-    {% else %}
-        <div class="container-fluid bg-4 text-center">
-            <p>Thanks for your appointment request! </p>
-            <p>You have requested an appointment for {{ data_sent }} </p>
-            <a href='{{destination}}'>Home</a>
-        </div>
-    {% endif %}
+<!--    {% if title %}-->
+<!--        <div class="container-fluid bg-3 text-center">-->
+<!--            <p>You can send us an appointment request using the POST method,-->
+<!--                because we don't know how to build forms yet </p>-->
+<!--            <p>Or email us, whatever</p>-->
+<!--            <a href="mailto:thenailbar@nailbar.com?subject=Appointment">Email appointment request</a>-->
+<!--        </div>-->
+<!--    {% else %}-->
+<!--        <div class="container-fluid bg-4 text-center">-->
+<!--            <p>Thanks for your appointment request! </p>-->
+<!--            <p>You have requested an appointment for {{ data_sent }} </p>-->
+<!--            <a href='{{destination}}'>Home</a>-->
+<!--        </div>-->
+<!--    {% endif %}-->
+
+<div class='form'>
+    <form method='POST' action=''>
+        {{ form.hidden_tag() }}
+        {{ form.first_name.label }} {{ form.first_name }}
+        <br>
+        {{ form.last_name.label }} {{ form.last_name }}
+        <br>
+        {{ form.email.label }} {{ form.email }}
+        <br>
+        {{ form.phone.label }} {{ form.phone }}
+        <br>
+        {{ form.time.label }} {{ form.time }}
+        <br>
+        {{ form.service.label }} {{ form.service }}
+        <br>
+        {{ form.submit }}
+    {{ message }}
+    </form>
+</div>
 {% endblock content %}

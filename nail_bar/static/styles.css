@@ -43,3 +43,16 @@ body {
   .btn-default {
       background-color: #006466; /* Skobeloff */
   }
+  .form {
+      position: relative;
+      width: 55%;
+      text-align: right;
+  }
+
+  .label {
+      position: absolute;
+      width: 30%;
+      left: 10%;
+      text-align: right;
+      margin-right: 30px;
+  }

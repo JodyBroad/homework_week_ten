@@ -7,6 +7,9 @@ class AppointmentForm(FlaskForm):
     last_name = StringField('Last Name')
     email = StringField('E-mail address')
     phone = StringField('Contact Telephone Number')
+    time = StringField('Appointment time requested')
+    service = StringField('Service requested')
+    submit = SubmitField('Submit Appointment Request')
 
 
 class ContactForm(FlaskForm):

@@ -1,7 +1,7 @@
 from flask import Flask, Response, request, url_for, render_template
 
 # instantiate the Flask application object
-from homework_week_ten.nail_bar.forms import ContactForm
+from homework_week_ten.nail_bar.forms import ContactForm, AppointmentForm
 
 nail_bar_app = Flask(__name__)
 
@@ -88,9 +88,25 @@ def home_redirect(word):
     return render_template('redirect.html', destination=destination)
 
 
-@nail_bar_app.route('/appointment')
+@nail_bar_app.route('/appointment', methods=['GET', 'POST'])
 def appointment():
-    return render_template('appointment.html', title='Appointments')
+    error = ""
+    form = AppointmentForm()
+
+    if request.method == 'POST':
+        first_name = form.first_name.data
+        last_name = form.last_name.data
+        email = form.email.data
+        phone = form.phone.data
+        time = form.time.data
+        service = form.service.data
+
+        if len(first_name) == 0 or len(last_name) == 0 or len(email) == 0 or len(phone) == 0 \
+                or len(time) == 0 or len(service) == 0:
+            error = "Please fill out all fields"
+        else:
+            return "Thank you, appointment request sent!"
+    return render_template('appointment.html', title='Appointments', form=form, message=error)
 
 
 # will post an appointment request - would do this using a form when we know how!
