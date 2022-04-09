@@ -1,7 +1,11 @@
 from flask import Flask, Response, request, url_for, render_template
 
 # instantiate the Flask application object
+from homework_week_ten.nail_bar.forms import ContactForm
+
 nail_bar_app = Flask(__name__)
+
+nail_bar_app.config['SECRET_KEY'] = 'YOUR_SECRET_KEY'
 
 # in reality, we would be calling this info from a database, dictionary of services to use for price_list
 services = [
@@ -36,8 +40,8 @@ services = [
         'time_required': '25 minutes'
     }
 
-
 ]
+
 
 # can use more than one decorator at a time, so if you typed either '/' or '/home' you get the same stuff returned
 
@@ -94,6 +98,24 @@ def appointment():
 def post_text():
     data_sent = request.data.decode('utf-8')
     return render_template('appointment.html', data_sent=data_sent, mimetype='text/plain')
+
+
+@nail_bar_app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    error = ""
+    form = ContactForm()
+
+    if request.method == 'POST':
+        first_name = form.first_name.data
+        last_name = form.last_name.data
+        email = form.email.data
+        message = form.message.data
+
+        if len(first_name) == 0 or len(last_name) == 0 or len(email) == 0 or '@' not in email or len(message) == 0:
+            error = "Please supply all required fields"
+        else:
+            return 'Thank you for contacting us. We will respond to you shortly'
+    return render_template('contact.html', title='Contact Us', form=form, message=error)
 
 
 if __name__ == "__main__":

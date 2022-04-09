@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block body_content %}
+
+<div class='form'>
+    <form method='POST' action=' '>
+        <!-- provides CRSF protection, alongside secret key. Use on all POST forms -->
+        {{ form.hidden_tag() }}
+        {{ form.first_name.label }} {{ form.first_name }}
+        <br>
+        {{ form.last_name.label }} {{ form.last_name }}
+        <br>
+        {{ form.email.label }} {{ form.email }}
+        <br>
+        {{ form.message.label }} {{ form.message }}
+        {{ form.submit }}
+    {{ message }}
+    </form>
+</div>
+{% endblock %}
