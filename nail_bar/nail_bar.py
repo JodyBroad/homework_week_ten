@@ -2,7 +2,7 @@ from flask import Flask, Response, request, url_for, render_template, flash, red
 
 
 # instantiate the Flask application object
-from homework_week_ten.nail_bar.forms import ContactForm, AppointmentForm
+from forms import ContactForm, AppointmentForm
 
 nail_bar_app = Flask(__name__)
 
@@ -114,6 +114,7 @@ def contact():
     error = ""
     form = ContactForm()
 
+    # contrast this to the data validator - per the class notes - see AppointmentForm
     if request.method == 'POST':
         first_name = form.first_name.data
         last_name = form.last_name.data
