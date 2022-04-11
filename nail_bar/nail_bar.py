@@ -88,7 +88,7 @@ def home_redirect(word):
     destination = url_for('home')
     return render_template('redirect.html', destination=destination)
 
-
+# this one does the validation in the forms.py code using wtforms.validators
 @nail_bar_app.route('/appointment', methods=['GET', 'POST'])
 def appointment():
     error = ""

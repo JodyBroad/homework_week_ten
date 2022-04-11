@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
+from wtforms import StringField, SubmitField, SelectField
 from wtforms.validators import DataRequired, Length, Email
 
 
@@ -10,6 +10,8 @@ class AppointmentForm(FlaskForm):
     phone = StringField('Contact Telephone Number', validators=[DataRequired()])
     time = StringField('Appointment date and time requested', validators=[DataRequired()])
     service = StringField('Service requested', validators=[DataRequired()])
+    # dropdown - should we hard code a list of the services? can we pull it from the dictionary, or can we create dynamic list somehow?
+    # service = SelectField('Service requested', choices=[(service.service)]([DataRequired()])
     submit = SubmitField('Submit Appointment Request')
 
 
